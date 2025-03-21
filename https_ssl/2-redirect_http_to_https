@@ -4,11 +4,11 @@ frontend http_front
     default_backend http_back
 
 frontend https_front
-    bind *:443 ssl crt /etc/haproxy/certs/www.enock.tech.pem
+    bind *:443 ssl crt /etc/haproxy/certs/www.h-mutumwinka.tech.pem
     http-request set-header X-Forwarded-Proto https
     default_backend http_back
 
 backend http_back
     balance roundrobin
-    server 6458-web-01 44.212.32.161:80 check
-    server 6458-web-02 54.205.34.198:80 check
+    server 6431-web-01 44.202.242.98:80 check
+    server 6431-web-02 34.201.60.111:80 check
